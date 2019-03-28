@@ -1,0 +1,19 @@
+import time
+import random
+roll_again="Yes"
+play=input("In order to win you must roll a double\nWould you like to play?")
+if play=="yes" or play=="y":
+    while roll_again=="Yes" or roll_again=="y":
+        print("Rolling dice...")
+        time.sleep(.8)
+        dice1=random.randint(1,6)
+        dice2=random.randint(1,6)
+        print(f"Dice 1 = {dice1}\nDice 2 = {dice2}")
+        time.sleep(.6)
+        if dice1==dice2:
+            print("WINNER WINNER\nGood job! You've rolled doubles!")
+        else:
+            print("Sorry you did not roll a double.")
+        roll_again=input("Would you like to roll again? (Y/N)")
+time.sleep(.5)
+print("See you again soon!")
